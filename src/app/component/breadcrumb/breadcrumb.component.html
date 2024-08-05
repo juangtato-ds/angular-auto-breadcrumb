@@ -1,0 +1,22 @@
+<!-- TODO this can be changed-->
+<nav aria-label="Breadcrumb" class="breadcrumb" *ngIf="breadcrumbList && breadcrumbList.length > 1">
+    <ol>
+        <ng-container *ngFor="let breadcrumb of breadcrumbList; index as i">
+            <li *ngIf="breadcrumbList.length == (i + 1); else notLast">
+                <a class="link-primary" tabindex="-1" aria-current="page">{{breadcrumb.label}}</a>
+            </li>
+
+            <ng-template #notLast>
+                <li>
+                    <ng-container *ngIf="breadcrumb.nolink; else breadcrumbConEnlace">
+                        <span>{{breadcrumb.label}} </span>
+                    </ng-container>
+
+                    <ng-template #breadcrumbConEnlace>
+                        <a [routerLink]="breadcrumb.url">{{breadcrumb.label}}</a>
+                    </ng-template>
+                </li>
+            </ng-template>
+        </ng-container>
+    </ol>
+</nav>

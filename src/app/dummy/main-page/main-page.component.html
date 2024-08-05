@@ -1,0 +1,14 @@
+<div class="sidenav">
+    <ol>
+        <li><a routerLink="account" routerLinkActive="current">My Account</a></li>
+        <li><a routerLink="trick/profile" routerLinkActive="current">Trick: Profile</a></li>
+        <li><a routerLink="trick/integrations" routerLinkActive="current">Trick: Integrations</a></li>
+        <li><a routerLink="trick/credentials" routerLinkActive="current">Trick: Credentials</a></li>
+    </ol>
+</div>
+<div class="container">
+    <app-breadcrumb></app-breadcrumb>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</div>

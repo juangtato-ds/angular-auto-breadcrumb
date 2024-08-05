@@ -1,0 +1,22 @@
+.sidenav {
+    float: left;
+    width: 150px;
+    height: 100vh;
+    background-color: lightgoldenrodyellow;
+}
+
+.container {
+    margin-left: 150px;
+
+    app-breadcrumb {
+        display: block;
+        height: 200px;
+        background-color: lightgreen;
+    }
+}
+
+.current {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
